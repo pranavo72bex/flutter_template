@@ -4,7 +4,7 @@ import 'package:flutter_template/routes/routes.dart';
 import 'package:flutter_template/theme/theme.dart';
 
 class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
+  MyApp({super.key});
   final appRouter = AppRouter();
 
   @override
