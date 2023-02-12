@@ -6,7 +6,7 @@ import 'package:flutter_template/features/home/view/lazy_loading.dart';
   routes: <AutoRoute>[
     MaterialRoute(page: HomePage),
     MaterialRoute(
-      page: LazyLoadingExample,
+      page: RiverpodCodeGenerationExaple,
       initial: true,
     ),
   ],

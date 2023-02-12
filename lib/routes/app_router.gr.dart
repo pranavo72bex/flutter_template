@@ -29,10 +29,10 @@ class AppRouter extends _i3.RootStackRouter {
         child: const _i1.HomePage(),
       );
     },
-    LazyLoadingExampleRoute.name: (routeData) {
+    RiverpodCodeGenerationExapleRoute.name: (routeData) {
       return _i3.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i2.LazyLoadingExample(),
+        child: const _i2.RiverpodCodeGenerationExaple(),
       );
     },
   };
@@ -44,7 +44,7 @@ class AppRouter extends _i3.RootStackRouter {
           path: '/home-page',
         ),
         _i3.RouteConfig(
-          LazyLoadingExampleRoute.name,
+          RiverpodCodeGenerationExapleRoute.name,
           path: '/',
         ),
       ];
@@ -63,13 +63,13 @@ class HomePageRoute extends _i3.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.LazyLoadingExample]
-class LazyLoadingExampleRoute extends _i3.PageRouteInfo<void> {
-  const LazyLoadingExampleRoute()
+/// [_i2.RiverpodCodeGenerationExaple]
+class RiverpodCodeGenerationExapleRoute extends _i3.PageRouteInfo<void> {
+  const RiverpodCodeGenerationExapleRoute()
       : super(
-          LazyLoadingExampleRoute.name,
+          RiverpodCodeGenerationExapleRoute.name,
           path: '/',
         );
 
-  static const String name = 'LazyLoadingExampleRoute';
+  static const String name = 'RiverpodCodeGenerationExapleRoute';
 }

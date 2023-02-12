@@ -29,16 +29,16 @@ class _SystemHash {
   }
 }
 
-String _$fetchListHash() => r'f8cf43c5561a57dc4ca778017f8770e75dd9ea1a';
+String _$fetchListHash() => r'c1580475623bac5d032daede09ad2291105e8587';
 
 /// See also [fetchList].
-class FetchListProvider extends AutoDisposeFutureProvider<String> {
+class FetchListProvider extends AutoDisposeFutureProvider<List<int>> {
   FetchListProvider({
-    required this.name,
+    required this.num,
   }) : super(
           (ref) => fetchList(
             ref,
-            name: name,
+            num: num,
           ),
           from: fetchListProvider,
           name: r'fetchListProvider',
@@ -48,44 +48,44 @@ class FetchListProvider extends AutoDisposeFutureProvider<String> {
                   : _$fetchListHash,
         );
 
-  final String name;
+  final int num;
 
   @override
   bool operator ==(Object other) {
-    return other is FetchListProvider && other.name == name;
+    return other is FetchListProvider && other.num == num;
   }
 
   @override
   int get hashCode {
     var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, name.hashCode);
+    hash = _SystemHash.combine(hash, num.hashCode);
 
     return _SystemHash.finish(hash);
   }
 }
 
-typedef FetchListRef = AutoDisposeFutureProviderRef<String>;
+typedef FetchListRef = AutoDisposeFutureProviderRef<List<int>>;
 
 /// See also [fetchList].
 final fetchListProvider = FetchListFamily();
 
-class FetchListFamily extends Family<AsyncValue<String>> {
+class FetchListFamily extends Family<AsyncValue<List<int>>> {
   FetchListFamily();
 
   FetchListProvider call({
-    required String name,
+    required int num,
   }) {
     return FetchListProvider(
-      name: name,
+      num: num,
     );
   }
 
   @override
-  AutoDisposeFutureProvider<String> getProviderOverride(
+  AutoDisposeFutureProvider<List<int>> getProviderOverride(
     covariant FetchListProvider provider,
   ) {
     return call(
-      name: provider.name,
+      num: provider.num,
     );
   }
 
