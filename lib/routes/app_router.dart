@@ -4,10 +4,12 @@ import 'package:flutter_template/features/home/view/lazy_loading.dart';
 
 @MaterialAutoRouter(
   routes: <AutoRoute>[
-    MaterialRoute(page: HomePage),
+    MaterialRoute(
+      page: HomePage,
+      initial: true,
+    ),
     MaterialRoute(
       page: RiverpodCodeGenerationExaple,
-      initial: true,
     ),
   ],
 )

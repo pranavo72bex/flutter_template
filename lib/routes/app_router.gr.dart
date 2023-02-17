@@ -41,11 +41,11 @@ class AppRouter extends _i3.RootStackRouter {
   List<_i3.RouteConfig> get routes => [
         _i3.RouteConfig(
           HomePageRoute.name,
-          path: '/home-page',
+          path: '/',
         ),
         _i3.RouteConfig(
           RiverpodCodeGenerationExapleRoute.name,
-          path: '/',
+          path: '/riverpod-code-generation-exaple',
         ),
       ];
 }
@@ -56,7 +56,7 @@ class HomePageRoute extends _i3.PageRouteInfo<void> {
   const HomePageRoute()
       : super(
           HomePageRoute.name,
-          path: '/home-page',
+          path: '/',
         );
 
   static const String name = 'HomePageRoute';
@@ -68,7 +68,7 @@ class RiverpodCodeGenerationExapleRoute extends _i3.PageRouteInfo<void> {
   const RiverpodCodeGenerationExapleRoute()
       : super(
           RiverpodCodeGenerationExapleRoute.name,
-          path: '/',
+          path: '/riverpod-code-generation-exaple',
         );
 
   static const String name = 'RiverpodCodeGenerationExapleRoute';
